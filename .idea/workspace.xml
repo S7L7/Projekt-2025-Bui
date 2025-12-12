@@ -28,11 +28,16 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="15954d05-59cc-4ce8-acca-d50d8213566d" name="Changes" comment="1.st">
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projekt.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlite3.c" beforeDir="false" />
+    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/attendance.sql" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/database_init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_init.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/employees.sql" beforeDir="false" afterPath="$PROJECT_DIR$/employees.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/sqlite3.c" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite3.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/sqlite3.h" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,11 +49,6 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory"><![CDATA[{
@@ -64,37 +64,25 @@
   }
 }]]></component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://ClockInOut.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://ClockInOut.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://ClockInOut.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://ClockInOut.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://sqlite3.c" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://sqlite3.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://sqlite3.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://sqlite3.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://sqlite3.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://sqlite3.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/sqlite3.c" root0="SKIP_HIGHLIGHTING" />
   </component>
-  <component name="MacroExpansionManager">
-    <option name="directoryName" value="3TVseTZr" />
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2025" />
+    <option name="minorVersion" value="2.4" />
+    <option name="productBranch" value="Classic" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 1
+  &quot;associatedIndex&quot;: 7
 }</component>
-  <component name="ProjectId" id="36hE7ue87QpgLsuLrUN7lTx8uco" />
+  <component name="ProjectId" id="36AIRgnzPLcUoICRy6xvZdyjYiW" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "CMake Application.Dochazkovy_system.executor": "Debug",
+    "CMake Application.Dochazkovy_system.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -102,71 +90,22 @@
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "RunOnceActivity.west.config.association.type.startup.service": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "Neco",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "/IdeaProjects/Projekt2025-Bui/Dochazkovy_system/CMakeLists.txt",
+    "last_opened_file_path": "C:/Users/buijo/OneDrive/Plocha/Dochazkovy_system",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "org.rust.first.attach.projects": "true",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
-  <component name="RdControllerToolWindowsLayoutState" isNewUi="true">
-    <layout>
-      <window_info id="Bookmarks" side_tool="true" />
-      <window_info id="Merge Requests" />
-      <window_info id="Backup and Sync History" />
-      <window_info id="Pull Requests" />
-      <window_info id="Learn" show_stripe_button="false" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.025260417" />
-      <window_info id="Commit" order="1" weight="0.23776042" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="TypeScript" />
-      <window_info anchor="bottom" id="Python Packages" />
-      <window_info anchor="bottom" id="TODO" />
-      <window_info anchor="bottom" id="File Transfer" />
-      <window_info anchor="bottom" id="Serial Monitor" />
-      <window_info anchor="bottom" id="PythonProcessOutput" />
-      <window_info anchor="bottom" id="Vcpkg" />
-      <window_info anchor="bottom" id="Find" />
-      <window_info anchor="bottom" id="clangd" />
-      <window_info anchor="bottom" id="Version Control" order="0" />
-      <window_info anchor="bottom" id="Problems" order="1" />
-      <window_info anchor="bottom" id="Problems View" order="2" weight="0.26017442" />
-      <window_info anchor="bottom" id="Terminal" order="3" weight="0.26017442" />
-      <window_info anchor="bottom" id="Services" order="4" />
-      <window_info anchor="bottom" id="CMake" order="5" />
-      <window_info anchor="bottom" id="Messages" order="6" weight="0.26017442" />
-      <window_info active="true" anchor="bottom" id="Run" order="7" visible="true" weight="0.26017442" />
-      <window_info anchor="bottom" id="Debug" order="8" weight="0.26017442" />
-      <window_info anchor="right" id="make" side_tool="true" />
-      <window_info anchor="right" id="Coverage" side_tool="true" />
-      <window_info anchor="right" id="Python Console" />
-      <window_info anchor="right" id="PlatformIO" />
-      <window_info anchor="right" content_ui="combo" id="Notifications" order="0" weight="0.25" />
-      <window_info anchor="right" id="AIAssistant" order="1" weight="0.25" />
-      <window_info anchor="right" id="Database" order="2" visible="true" weight="0.015885416" />
-      <window_info anchor="right" id="Gradle" order="3" weight="0.25" />
-      <window_info anchor="right" id="Maven" order="4" weight="0.25" />
-      <window_info anchor="right" id="Meson" order="5" />
-    </layout>
-  </component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Dochazkovy_system" />
-    </key>
-  </component>
   <component name="RunManager">
-    <configuration name="Dochazkovy_system" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Dochazkovy_system" TARGET_NAME="Dochazkovy_system" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Dochazkovy_system" RUN_TARGET_NAME="Dochazkovy_system">
+    <configuration name="Projekt2025_Bui" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projekt2025_Bui" TARGET_NAME="Projekt2025_Bui" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projekt2025_Bui" RUN_TARGET_NAME="Projekt2025_Bui">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -179,25 +118,16 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="15954d05-59cc-4ce8-acca-d50d8213566d" name="Changes" comment="" />
-      <created>1765450245202</created>
+      <changelist id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="" />
+      <created>1764442942842</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1765450245202</updated>
-      <workItem from="1765450250774" duration="4237000" />
-      <workItem from="1765523500974" duration="1670000" />
-      <workItem from="1765530581621" duration="164000" />
-      <workItem from="1765530876609" duration="2698000" />
+      <updated>1764442942842</updated>
+      <workItem from="1764442943970" duration="572000" />
+      <workItem from="1765285491290" duration="3522000" />
+      <workItem from="1765443842851" duration="5109000" />
+      <workItem from="1765539167732" duration="7000" />
     </task>
-    <task id="LOCAL-00001" summary="1.st">
-      <option name="closed" value="true" />
-      <created>1765532546601</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1765532546601</updated>
-    </task>
-    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -207,24 +137,5 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="1.st" />
-    <option name="LAST_COMMIT_MESSAGE" value="1.st" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>
