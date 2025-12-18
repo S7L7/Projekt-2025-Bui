@@ -15,7 +15,7 @@ sqlite3* openDatabase(const string &filename) {
     }
     return db;
     };
-
+// hledání ID v tabulce zaměstnanců
 int findemployeeId(sqlite3* db, const string& rfid) {
     const char* sql= "SELECT id FROM employees WHERE rfid_uid = ? LIMIT 1;";
     sqlite3_stmt* stmt = nullptr;
@@ -101,27 +101,21 @@ int main() {
             break;
         }
 
-
-
-
         int employeeId = findemployeeId(db, rfid);
-
         if (employeeId == -1) {
             cout << "Zamestnanec nenalezen" << endl;
             sqlite3_close(db);
             return 1;
         }
-
         cout << "Zamestnanec nalezen s prirazenym ID: " << employeeId << endl;
 
         string type = nextEventType(db,employeeId);
         cout << "Entry/Exit: " << type << endl;
-
-        if (insertAttendance(db,employeeId,type)) {
+            if (insertAttendance(db,employeeId,type)) {
             cout << "Dochazka zapsana" << endl;
-        } else {
+            } else {
             cout << "Error: Nezapsano" << endl;
-        }
+            }
     }
         sqlite3_close(db);
         return 0;
