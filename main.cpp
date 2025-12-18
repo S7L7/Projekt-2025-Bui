@@ -1,5 +1,5 @@
 //
-// Created by buijo on 29.11.2025.
+// Created by bui on 29.11.2025.
 //
 #include <iostream>
 #include <string>
@@ -111,7 +111,3 @@ sqlite3* db = openDatabase("attendance.db");
     sqlite3_close(db);
     return 0;
 }
-
-#include <iostream>
-#include <string>
-#include "sqlite3.h"

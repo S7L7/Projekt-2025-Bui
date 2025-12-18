@@ -19,7 +19,7 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="Dochazkovy_system" targetName="Dochazkovy_system" />
+      <config projectName="Projekt2025_Bui" targetName="Projekt2025-Bui" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -28,16 +28,15 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="">
+    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="refactor projektu">
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/attendance.sql" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/database_init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/database_init.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/employees.sql" beforeDir="false" afterPath="$PROJECT_DIR$/employees.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/sqlite3.c" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite3.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dochazkovy_system/sqlite3.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database_init.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/employees.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlite3.c" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite3.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,19 +49,20 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "S7L7"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;S7L7&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/S7L7/Projekt-2025-Bui.git",
-    "accountId": "94a8fe6f-32af-4c10-aba4-eb8b3d7711ed"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/S7L7/Projekt-2025-Bui.git&quot;,
+    &quot;accountId&quot;: &quot;94a8fe6f-32af-4c10-aba4-eb8b3d7711ed&quot;
   }
-}]]></component>
+}</component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/sqlite3.c" root0="SKIP_HIGHLIGHTING" />
   </component>
@@ -83,6 +83,8 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "CMake Application.Dochazkovy_system.executor": "Run",
+    "CMake Application.Projekt2025-Bui.executor": "Run",
+    "CMake Application.Projekt2025_Bui.executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.RadMigrateCodeStyle": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
@@ -91,6 +93,7 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
     "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "cf.first.check.clang-format": "false",
     "cidr.known.project.marker": "true",
     "git-widget-placeholder": "Neco",
@@ -104,13 +107,19 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\buijo\OneDrive\Plocha\Projekt2025-Bui\Dochazkovy_system" />
+      <recent name="C:\Users\buijo\OneDrive\Plocha\Projekt2025-Bui" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration name="Projekt2025_Bui" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projekt2025_Bui" TARGET_NAME="Projekt2025_Bui" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projekt2025_Bui" RUN_TARGET_NAME="Projekt2025_Bui">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Projekt2025-Bui" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projekt2025_Bui" TARGET_NAME="Projekt2025-Bui" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projekt2025_Bui" RUN_TARGET_NAME="Projekt2025-Bui">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -126,8 +135,19 @@
       <workItem from="1764442943970" duration="572000" />
       <workItem from="1765285491290" duration="3522000" />
       <workItem from="1765443842851" duration="5109000" />
-      <workItem from="1765539167732" duration="7000" />
+      <workItem from="1765539167732" duration="1035000" />
+      <workItem from="1766049459726" duration="248000" />
+      <workItem from="1766050132343" duration="1533000" />
     </task>
+    <task id="LOCAL-00001" summary="refactor projektu">
+      <option name="closed" value="true" />
+      <created>1765539249792</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1765539249792</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -137,5 +157,20 @@
     <isAutomaticCheckingOnLaunch value="false" />
     <isAutomaticFoundErrors value="true" />
     <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="refactor projektu" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor projektu" />
   </component>
 </project>
