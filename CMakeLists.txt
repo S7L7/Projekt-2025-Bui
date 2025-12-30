@@ -9,6 +9,8 @@ set(CMAKE_CXX_STANDARD 14)
 add_executable(Projekt2025-Bui
         main.cpp
         sqlite3.c
+        DataFetch.cpp
+        Attendance_log.cpp
 )
 
 target_link_libraries(Projekt2025-Bui
