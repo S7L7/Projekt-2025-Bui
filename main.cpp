@@ -32,10 +32,12 @@ int main() {
         string type = nextEventType(db,employeeId);
         cout << "Entry/Exit: " << type << endl;
 
+        string employeeName = getEmployeeName(db, employeeId);
+
         if (insertAttendance(db, employeeId, type)) {
             cout << "Dochazka zapsana" << endl;
             writeAttendanceToFile(
-                "employeeID=" + to_string(employeeId),
+            to_string(employeeId)+ " | " + employeeName,
                 type);
         } else {
             cout << "Error: Nezapsano" << endl;

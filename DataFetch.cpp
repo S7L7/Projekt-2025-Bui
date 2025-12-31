@@ -84,3 +84,21 @@ sqlite3_bind_int (stmt, 1 , employeeId);
     sqlite3_finalize(stmt);
     return result;
 }
+
+string getEmployeeName(sqlite3* db, int employeeId) {
+    const char* sql =
+        "SELECT name FROM employees WHERE id = ? LIMIT 1;";
+    sqlite3_stmt* stmt = nullptr;
+
+    if (sqlite3_prepare_v2(db,sql,-1, &stmt, nullptr) != SQLITE_OK) {
+    return "UNKNOWN";
+    }
+    sqlite3_bind_int(stmt, 1, employeeId);
+
+    string name = "UNKNOWN";
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        name = reinterpret_cast<const char*>(sqlite3_column_text(stmt,0));
+    }
+    sqlite3_finalize(stmt);
+    return name;
+}
