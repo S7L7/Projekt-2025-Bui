@@ -4,7 +4,7 @@ employee_id INTEGER NOT NULL,
 timestamp TEXT NOT NULL DEFAULT (datetime('now')),
 type TEXT NOT NULL,
 FOREIGN KEY (employee_id) REFERENCES employees(id)
-);
+
 
 // Přidávání zaměstnanců/ odebrání zaměstnanců
 INSERT INTO employees (name, rfid_uid) VALUES ('Jmeno', 'RFID');

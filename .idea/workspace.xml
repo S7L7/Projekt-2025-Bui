@@ -28,9 +28,14 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="Double insert">
+    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="LVL timer func">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataFetch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DataFetch.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataFetch.h" beforeDir="false" afterPath="$PROJECT_DIR$/DataFetch.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/attendance.sql" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -59,11 +64,32 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/buijo/OneDrive/Plocha/Projekt2025-Bui/Attendance_log.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/buijo/OneDrive/Plocha/Projekt2025-Bui/main.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/buijo/OneDrive/Plocha/Projekt2025-Bui/main.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/buijo/OneDrive/Plocha/Projekt2025-Bui/main.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/buijo/OneDrive/Plocha/Projekt2025-Bui/main.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/sqlite3.c" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
@@ -88,7 +114,7 @@
     &quot;C/C++ File.DataOutput.cpp.executor&quot;: &quot;Run&quot;,
     &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
     &quot;CMake Application.Dochazkovy_system.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.Projekt2025-Bui.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.Projekt2025-Bui.executor&quot;: &quot;Debug&quot;,
     &quot;CMake Application.Projekt2025_Bui.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Notification.DisplayName-DoNotAsk-vcs.commit.finished&quot;: &quot;5 files committed&quot;,
@@ -122,6 +148,11 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.Projekt2025-Bui">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Projekt2025-Bui" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projekt2025-Bui" TARGET_NAME="Projekt2025-Bui" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projekt2025-Bui" RUN_TARGET_NAME="Projekt2025-Bui">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -171,7 +202,10 @@
       <workItem from="1767121930744" duration="7665000" />
       <workItem from="1767188782400" duration="20138000" />
       <workItem from="1767609965509" duration="3242000" />
-      <workItem from="1767696937264" duration="2754000" />
+      <workItem from="1767696937264" duration="4039000" />
+      <workItem from="1767706700453" duration="533000" />
+      <workItem from="1767855763919" duration="3117000" />
+      <workItem from="1767862978459" duration="2828000" />
     </task>
     <task id="LOCAL-00001" summary="refactor projektu">
       <option name="closed" value="true" />
@@ -245,7 +279,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767613316093</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="LVL timer func">
+      <option name="closed" value="true" />
+      <created>1767699755679</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1767699755679</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -273,6 +315,14 @@
     <MESSAGE value="base code,database" />
     <MESSAGE value="code backup" />
     <MESSAGE value="Double insert" />
-    <option name="LAST_COMMIT_MESSAGE" value="Double insert" />
+    <MESSAGE value="LVL timer func" />
+    <option name="LAST_COMMIT_MESSAGE" value="LVL timer func" />
+  </component>
+  <component name="XDebuggerManager">
+    <watches-manager>
+      <configuration name="CMakeRunConfiguration">
+        <watch expression="it" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
