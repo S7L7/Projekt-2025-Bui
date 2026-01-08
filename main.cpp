@@ -8,6 +8,7 @@
 #include <windows.h>
 #include <chrono>
 #include <unordered_map>
+#include "adminmenu.h"
 
 using namespace std;
 using Clock = std::chrono::steady_clock;
@@ -25,7 +26,10 @@ int main() {
         string rfid;
         cout << "Zadejte ID: ";
         cin >> rfid;
-
+        if (rfid == "ADMINMODE") {
+            runAdminMenu(db);
+            continue;
+        }
         if (rfid == "EXIT") {
             break;
         }
@@ -52,15 +56,13 @@ int main() {
             }
 
         string type;
-        if (emp.status == 0)
-            type = "Entry";
-        else
-            type = "Exit";
-
+        bool isEntry = (emp.status == 0);
+        type = isEntry ? "entry" : "exit";
         cout << "Entry/Exit: " << type << endl;
 
         if (insertAttendance(db, emp.id, type)) {
-            int newStatus = (type == "entry") ? 1:0;
+            int newStatus = isEntry ? 1 : 0;
+
             if (updateEmployeeStatus(db, emp.id, newStatus)) {
                 lastValidAction[emp.id] = now;
             }
@@ -68,11 +70,14 @@ int main() {
             cout << "Dochazka zapsana" << endl;
 
             writeAttendanceToFile(
-            to_string(emp.id)+ " | " + emp.name, type);
+            to_string(emp.id)+ " | " + emp.name,
+            type
+            );
+
             } else {
                 cout << "Error: Nezapsano" << endl;
             }
-        }
-        sqlite3_close(db);
-        return 0;
+    }
+    sqlite3_close(db);
+    return 0;
 }

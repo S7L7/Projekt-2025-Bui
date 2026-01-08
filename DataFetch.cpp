@@ -91,6 +91,7 @@ Employee getEmployeeByRfid(sqlite3* db, const std::string& rfid) {
         emp.id = sqlite3_column_int(stmt,0);
         emp.name = reinterpret_cast<const char*>(sqlite3_column_text(stmt,1));
         emp.rfid = reinterpret_cast<const char*>(sqlite3_column_text(stmt,2));
+        emp.status = sqlite3_column_int(stmt,3);
     }
     sqlite3_finalize(stmt);
     return emp;
