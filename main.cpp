@@ -5,12 +5,22 @@
 #include <string>
 #include "DataFetch.h"
 #include "Attendance_log.h"
+#include <windows.h>
+#include <chrono>
+#include <unordered_map>
 
 using namespace std;
+using Clock = std::chrono::steady_clock;
 
 int main() {
-        sqlite3* db = openDatabase("../attendance.db");
-        if (!db) return 1;
+    SetConsoleOutputCP(CP_UTF8);
+    SetConsoleCP(CP_UTF8); // chcp 65001
+
+    sqlite3* db = openDatabase("../attendance.db");
+    if (!db) return 1;
+
+    std::unordered_map<int,Clock::time_point> lastValidAction;
+
     while (true) {
         string rfid;
         cout << "Zadejte ID: ";
@@ -20,29 +30,49 @@ int main() {
             break;
         }
 
-        int employeeId = findemployeeId(db, rfid);
+        Employee emp = getEmployeeByRfid(db, rfid);
 
-        if (employeeId == -1) {
+        if (emp.id == -1) {
             cout << "Zamestnanec nenalezen" << endl;
             continue;
         }
 
-        cout << "Zamestnanec nalezen s prirazenym ID: " << employeeId << endl;
+        cout << emp.id << " | " << emp.name << endl;
 
-        string type = nextEventType(db,employeeId);
+        auto now = Clock::now();
+
+        auto it = lastValidAction.find(emp.id);
+        if (it != lastValidAction.end()) {
+            auto diff = std::chrono::duration_cast<std::chrono::seconds>(now - it->second).count();
+
+            if (diff < 10) {
+                    cerr << "Neplatný vstup(počkejte 10 vteřin)" << endl;
+                    continue;
+                }
+            }
+
+        string type;
+        if (emp.status == 0)
+            type = "Entry";
+        else
+            type = "Exit";
+
         cout << "Entry/Exit: " << type << endl;
 
-        string employeeName = getEmployeeName(db, employeeId);
+        if (insertAttendance(db, emp.id, type)) {
+            int newStatus = (type == "entry") ? 1:0;
+            if (updateEmployeeStatus(db, emp.id, newStatus)) {
+                lastValidAction[emp.id] = now;
+            }
 
-        if (insertAttendance(db, employeeId, type)) {
             cout << "Dochazka zapsana" << endl;
+
             writeAttendanceToFile(
-            to_string(employeeId)+ " | " + employeeName,
-                type);
-        } else {
-            cout << "Error: Nezapsano" << endl;
+            to_string(emp.id)+ " | " + emp.name, type);
+            } else {
+                cout << "Error: Nezapsano" << endl;
+            }
         }
-    }
         sqlite3_close(db);
         return 0;
 }

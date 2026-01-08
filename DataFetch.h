@@ -7,6 +7,7 @@
 
 #include <string>
 #include "sqlite3.h"
+#include "Employee.h"
 
 
 sqlite3* openDatabase(const std::string &filename);
@@ -14,4 +15,6 @@ int findemployeeId(sqlite3* db, const std::string& rfid);
 bool insertAttendance(sqlite3* db,int employeeId, const std::string &type);
 std::string nextEventType(sqlite3* db, int employeeId);
 std::string getEmployeeName(sqlite3* db, int employeeId);
+Employee getEmployeeByRfid(sqlite3* db, const std::string& rfid);
+bool updateEmployeeStatus(sqlite3* db, int employeeId, int newStatus);
 #endif //DOCHAZKOVY_SYSTEM_DATAFETCH2_H

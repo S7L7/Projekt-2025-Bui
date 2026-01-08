@@ -1,5 +1,6 @@
 #include <iostream>
 #include "DataFetch.h"
+#include "Employee.h"
 
 using namespace std;
 
@@ -56,35 +57,6 @@ bool insertAttendance(sqlite3* db,int employeeId, const string &type) {
     return true;
 }
 
-string nextEventType(sqlite3* db, int employeeId){
-const char* sql =
-    "SELECT type FROM attendance "
-    "WHERE employee_id = ? "
-    "ORDER BY timestamp DESC "
-    "LIMIT 1;";
-sqlite3_stmt* stmt = nullptr;
-
-if (sqlite3_prepare_v2(db,sql, -1 , &stmt, nullptr) != SQLITE_OK) {
-    cerr << "Chyba pri priprave nacteni posledniho zaznamu: " <<  sqlite3_errmsg(db) << endl;
-    return "entry";
-}
-
-sqlite3_bind_int (stmt, 1 , employeeId);
-    string result = "entry";
-
-    int rc=sqlite3_step(stmt);
-
-    if (rc == SQLITE_ROW) {
-        string last = reinterpret_cast<const char*>(sqlite3_column_text(stmt,0));
-        if (last == "entry")
-            result = "exit";
-        else result = "entry";
-    }
-
-    sqlite3_finalize(stmt);
-    return result;
-}
-
 string getEmployeeName(sqlite3* db, int employeeId) {
     const char* sql =
         "SELECT name FROM employees WHERE id = ? LIMIT 1;";
@@ -102,3 +74,46 @@ string getEmployeeName(sqlite3* db, int employeeId) {
     sqlite3_finalize(stmt);
     return name;
 }
+
+Employee getEmployeeByRfid(sqlite3* db, const std::string& rfid) {
+    const char* sql = "SELECT id, name, rfid_uid, status FROM employees WHERE rfid_uid = ? LIMIT 1;";
+    sqlite3_stmt* stmt = nullptr;
+
+    Employee emp;
+    emp.id = -1;
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        return emp;
+    }
+    sqlite3_bind_text(stmt, 1, rfid.c_str(), -1, SQLITE_TRANSIENT);
+
+    if (sqlite3_step(stmt) == SQLITE_ROW) {
+        emp.id = sqlite3_column_int(stmt,0);
+        emp.name = reinterpret_cast<const char*>(sqlite3_column_text(stmt,1));
+        emp.rfid = reinterpret_cast<const char*>(sqlite3_column_text(stmt,2));
+    }
+    sqlite3_finalize(stmt);
+    return emp;
+}
+
+bool updateEmployeeStatus(sqlite3 *db, int employeeId, int newStatus) {
+    const char* sql = "UPDATE employees SET status = ? WHERE id = ?;";
+    sqlite3_stmt* stmt = nullptr;
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        cerr << "Chyba pri priprave aktualizace dat: " << sqlite3_errmsg(db) << endl;
+        return false;
+    }
+    sqlite3_bind_int(stmt, 1, newStatus);
+    sqlite3_bind_int(stmt, 2, employeeId);
+    int rc=sqlite3_step(stmt);
+
+    if (rc != SQLITE_DONE) {
+        cerr << "Chyba pri vlozeni dat" <<  sqlite3_errmsg(db) << endl;
+        sqlite3_finalize(stmt);
+        return false;
+    }
+    sqlite3_finalize(stmt);
+    return true;
+}
+
+
