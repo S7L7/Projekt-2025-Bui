@@ -28,15 +28,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="LVL timer func">
+    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="Bug fix, admin preliminary">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataFetch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DataFetch.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFetch.h" beforeDir="false" afterPath="$PROJECT_DIR$/DataFetch.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance.sql" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -114,7 +110,7 @@
     &quot;C/C++ File.DataOutput.cpp.executor&quot;: &quot;Run&quot;,
     &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
     &quot;CMake Application.Dochazkovy_system.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.Projekt2025-Bui.executor&quot;: &quot;Debug&quot;,
+    &quot;CMake Application.Projekt2025-Bui.executor&quot;: &quot;Run&quot;,
     &quot;CMake Application.Projekt2025_Bui.executor&quot;: &quot;Run&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
     &quot;Notification.DisplayName-DoNotAsk-vcs.commit.finished&quot;: &quot;5 files committed&quot;,
@@ -148,12 +144,12 @@
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.Projekt2025-Bui">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration name="Projekt2025-Bui" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projekt2025-Bui" TARGET_NAME="Projekt2025-Bui" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projekt2025-Bui" RUN_TARGET_NAME="Projekt2025-Bui">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Projekt2025-Bui" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projekt2025-Bui" TARGET_NAME="Projekt2025-Bui" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projekt2025-Bui" RUN_TARGET_NAME="Projekt2025-Bui">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -205,7 +201,9 @@
       <workItem from="1767696937264" duration="4039000" />
       <workItem from="1767706700453" duration="533000" />
       <workItem from="1767855763919" duration="3117000" />
-      <workItem from="1767862978459" duration="2828000" />
+      <workItem from="1767862978459" duration="3133000" />
+      <workItem from="1767872286459" duration="2334000" />
+      <workItem from="1767950851396" duration="2991000" />
     </task>
     <task id="LOCAL-00001" summary="refactor projektu">
       <option name="closed" value="true" />
@@ -287,7 +285,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767699755679</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Bug fix, admin preliminary">
+      <option name="closed" value="true" />
+      <created>1767867043080</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1767867043080</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -316,7 +322,8 @@
     <MESSAGE value="code backup" />
     <MESSAGE value="Double insert" />
     <MESSAGE value="LVL timer func" />
-    <option name="LAST_COMMIT_MESSAGE" value="LVL timer func" />
+    <MESSAGE value="Bug fix, admin preliminary" />
+    <option name="LAST_COMMIT_MESSAGE" value="Bug fix, admin preliminary" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
