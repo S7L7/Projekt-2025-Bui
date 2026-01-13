@@ -1,6 +1,7 @@
 #include <iostream>
 #include "DataFetch.h"
 #include "Employee.h"
+#include "adminmenu.h"
 
 using namespace std;
 
@@ -117,4 +118,42 @@ bool updateEmployeeStatus(sqlite3 *db, int employeeId, int newStatus) {
     return true;
 }
 
+bool addEmployee(sqlite3 *db, const std::string& name, const std::string &rfid) {
+    const char* sql =
+        "INSERT INTO employees (name, rfid_uid) VALUES (?, ?);";
+    sqlite3_stmt* stmt = nullptr;
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        cerr << "Chyba pri priprave vkladani dat: " << sqlite3_errmsg(db) << endl;
+        return false;
+    }
+    sqlite3_bind_text(stmt, 1, name.c_str(), -1, SQLITE_TRANSIENT);
+    sqlite3_bind_text(stmt, 2, rfid.c_str(), -1, SQLITE_TRANSIENT);
+    int rc=sqlite3_step(stmt);
 
+    if (rc != SQLITE_DONE) {
+        cerr << "Chyba pri vlozeni dat" <<  sqlite3_errmsg(db) << endl;
+        sqlite3_finalize(stmt);
+        return false;
+    }
+    sqlite3_finalize(stmt);
+    return true;
+}
+bool deactivateEmployee(sqlite3* db, int employeeId) {
+    const char* sql = "UPDATE employees SET active = ? WHERE id = ?;";
+    sqlite3_stmt* stmt = nullptr;
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        cerr << "Chyba pri priprave aktualizace dat: " << sqlite3_errmsg(db) << endl;
+        return false;
+    }
+    sqlite3_bind_int(stmt, 1, active);
+    sqlite3_bind_int(stmt, 2, employeeId);
+    int rc=sqlite3_step(stmt);
+
+    if (rc != SQLITE_DONE) {
+        cerr << "Chyba pri vlozeni dat" <<  sqlite3_errmsg(db) << endl;
+        sqlite3_finalize(stmt);
+        return false;
+    }
+    sqlite3_finalize(stmt);
+    return true;
+}
