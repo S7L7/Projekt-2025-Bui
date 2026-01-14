@@ -9,7 +9,6 @@
 #include "sqlite3.h"
 #include "Employee.h"
 
-
 sqlite3* openDatabase(const std::string &filename);
 int findemployeeId(sqlite3* db, const std::string& rfid);
 bool insertAttendance(sqlite3* db,int employeeId, const std::string &type);
@@ -19,5 +18,5 @@ Employee getEmployeeByRfid(sqlite3* db, const std::string& rfid);
 bool updateEmployeeStatus(sqlite3* db, int employeeId, int newStatus);
 bool addEmployee(sqlite3* db, const std::string& name, const std::string& rfid);
 bool deactivateEmployee(sqlite3* db, int employeeId);
-//vector <Attendancerecord> getAttendanceForEmployee(sqlite3* db, int employeeId);
+vector <Attendancerecord> getAttendanceHistory(sqlite3* db, int employeeId);
 #endif //DOCHAZKOVY_SYSTEM_DATAFETCH2_H

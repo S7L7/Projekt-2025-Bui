@@ -46,7 +46,6 @@ void runAdminMenu(sqlite3* db){
                 }break;
             }
             case 3:     // vypsat čas
-
             case 4:     // zpet s vypnutim admin modu
                 return;
             default : std::cout << "neplatna volba" << std::endl;

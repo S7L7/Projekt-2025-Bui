@@ -5,6 +5,7 @@
 
 using namespace std;
 
+
 sqlite3* openDatabase(const string &filename) {
     sqlite3* db=nullptr;
     if(sqlite3_open(filename.c_str(), &db) != SQLITE_OK){
@@ -156,4 +157,46 @@ bool deactivateEmployee(sqlite3* db, int employeeId) {
     }
     sqlite3_finalize(stmt);
     return true;
+}
+struct Attendancerecord{
+    string type;
+    string timestamp;
+};
+vector<Attendancerecord>;
+getAttendanceHistory(sqlite3* db, int employeeId) {
+    const char* sql = "SELECT type,timestamp FROM attendance WHERE employee_id = ?  ORDER BY timestamp";
+    vector<Attendancerecord> records;
+    sqlite3_stmt* stmt = nullptr;
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+        cerr << "Chyba pri priprave nacteni historie: " << sqlite3_errmsg(db) << endl;
+        return records;
+    }
+    sqlite3_bind_int(stmt, 1, employeeId);
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        AttendanceRecord rec;
+        rec.type = reinterpet_cast<const char*>(sqlite3_column_text(stmt, 0));
+        rec.timestamp = sqlite3_column_text(stmt, 1);
+        records.push_back(rec);
+    }
+
+    sqlite3_finalize(stmt);
+    return records;
+}
+long long calculateWorkedSeconds(const vector<Attendancerecord>& records){
+    long long totalSeconds = 0;
+    bool hasEntry = false;
+    time_t entryTime = 0;
+
+    for (const auto& rec : records) {
+        if (rec.type == "entry") {
+            entryTime = parseTimestamp(rec.timestamp);
+            hasEntry = true;
+        }else if (rec.type == "exit" && hasEntry) {
+            time_t exitTime = parseTimestamp(rec.timestamp);
+            totalSeconds += (exitTime - entryTime);
+            hasEntry = false;
+        }
+    }
+    return totalSeconds;
 }

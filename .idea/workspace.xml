@@ -28,11 +28,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="Bug fix, admin preliminary">
+    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="adminmode update-add/deact emp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataFetch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DataFetch.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/DataFetch.h" beforeDir="false" afterPath="$PROJECT_DIR$/DataFetch.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/adminmenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/adminmenu.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -149,11 +149,6 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="DataOutput.cpp" type="CppFileRunConfiguration" factoryName="CppFileRunConfiguration" temporary="true" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Dochazkovy_system" TARGET_NAME="DataOutput.cpp" CONFIG_NAME="DataOutput.cpp">
       <option name="sourceFile" value="DataOutput.cpp" />
       <method v="2">
@@ -203,7 +198,9 @@
       <workItem from="1767855763919" duration="3117000" />
       <workItem from="1767862978459" duration="3133000" />
       <workItem from="1767872286459" duration="2334000" />
-      <workItem from="1767950851396" duration="2991000" />
+      <workItem from="1767950851396" duration="3065000" />
+      <workItem from="1768201229806" duration="4309000" />
+      <workItem from="1768397807995" duration="2628000" />
     </task>
     <task id="LOCAL-00001" summary="refactor projektu">
       <option name="closed" value="true" />
@@ -293,7 +290,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767867043080</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="adminmode update-add/deact emp">
+      <option name="closed" value="true" />
+      <created>1767953913867</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1767953913867</updated>
+    </task>
+    <task id="LOCAL-00013" summary="adminmode update-add/deact emp">
+      <option name="closed" value="true" />
+      <created>1767953923164</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1767953923164</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -323,7 +336,8 @@
     <MESSAGE value="Double insert" />
     <MESSAGE value="LVL timer func" />
     <MESSAGE value="Bug fix, admin preliminary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fix, admin preliminary" />
+    <MESSAGE value="adminmode update-add/deact emp" />
+    <option name="LAST_COMMIT_MESSAGE" value="adminmode update-add/deact emp" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
