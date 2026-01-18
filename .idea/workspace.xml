@@ -28,11 +28,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="adminmode update-add/deact emp">
+    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="Timestamp rec. DF.cpp">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/DataFetch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DataFetch.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFetch.h" beforeDir="false" afterPath="$PROJECT_DIR$/DataFetch.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminmenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/adminmenu.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,9 +160,9 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="C/C++ File.main.cpp" />
-      <item itemvalue="C/C++ File.DataOutput.cpp" />
       <item itemvalue="CMake Application.Projekt2025-Bui" />
+      <item itemvalue="C/C++ File.DataOutput.cpp" />
+      <item itemvalue="C/C++ File.main.cpp" />
     </list>
     <recent_temporary>
       <list>
@@ -200,7 +198,10 @@
       <workItem from="1767872286459" duration="2334000" />
       <workItem from="1767950851396" duration="3065000" />
       <workItem from="1768201229806" duration="4309000" />
-      <workItem from="1768397807995" duration="2628000" />
+      <workItem from="1768397807995" duration="2937000" />
+      <workItem from="1768461872825" duration="377000" />
+      <workItem from="1768464268736" duration="852000" />
+      <workItem from="1768744804093" duration="11000" />
     </task>
     <task id="LOCAL-00001" summary="refactor projektu">
       <option name="closed" value="true" />
@@ -306,7 +307,15 @@
       <option name="project" value="LOCAL" />
       <updated>1767953923164</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Timestamp rec. DF.cpp">
+      <option name="closed" value="true" />
+      <created>1768400729543</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1768400729543</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -337,7 +346,8 @@
     <MESSAGE value="LVL timer func" />
     <MESSAGE value="Bug fix, admin preliminary" />
     <MESSAGE value="adminmode update-add/deact emp" />
-    <option name="LAST_COMMIT_MESSAGE" value="adminmode update-add/deact emp" />
+    <MESSAGE value="Timestamp rec. DF.cpp" />
+    <option name="LAST_COMMIT_MESSAGE" value="Timestamp rec. DF.cpp" />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>

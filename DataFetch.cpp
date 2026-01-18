@@ -1,4 +1,6 @@
 #include <iostream>
+#include <iomanip>
+#include <sstream>
 #include "DataFetch.h"
 #include "Employee.h"
 #include "adminmenu.h"
@@ -199,4 +201,12 @@ long long calculateWorkedSeconds(const vector<Attendancerecord>& records){
         }
     }
     return totalSeconds;
+}
+time_t ParseTimestamp(const string& ts) {
+    tm tm = {};
+    isstringstream  ss(ts);
+
+    ss >> get.time(&tm, "%Y-%m-%d %H:%M:%S");
+
+    return mktime(&tm);
 }
