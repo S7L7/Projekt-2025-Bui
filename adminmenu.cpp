@@ -55,7 +55,25 @@ void runAdminMenu(sqlite3* db){
                     std::cout << "Chyba při aktivaci zaměstnance!" << std::endl;
                 }break;
             }
-            case 4://čas
+            case 4: {
+                int id;
+                std::cout << "Zadejte ID zaměstnance" << std::endl;
+                std::cin >> id;
+
+                auto history = getAttendanceHistory(db,id);
+
+                if (history.empty()) {
+                std::cout << "Žádná zaznamenaná docházka." << std::endl;
+                break;
+                }
+                long long seconds = calculateWorkedSeconds(history);
+
+                long long hours = seconds / 3600;
+                long long minutes = (seconds % 3600) / 60;
+
+                std::cout << "odpracovaný čas: " << hours << ":" << minutes << std::endl;
+                break;
+            }//čas
             case 5:// zpet s vypnutim admin modu
                 return;
             default : std::cout << "neplatna volba" << std::endl;

@@ -1,9 +1,21 @@
 #include <iostream>
+#include <sstream>
+#include <iomanip>
 #include "DataFetch.h"
 #include "Employee.h"
 #include "adminmenu.h"
 
 using namespace std;
+
+time_t parseTimestamp(const string& ts) {
+std::tm tm = {};
+std::istringstream ss(ts);
+
+ss >> std::get_time(&tm, "%Y-%m-%d %H:%M");
+tm.tm_sec = 0;
+
+return std::mktime(&tm);
+}
 
 sqlite3* openDatabase(const string &filename) {
     sqlite3* db=nullptr;
@@ -179,4 +191,54 @@ bool activateEmployee(sqlite3* db, int employeeId) {
     sqlite3_finalize(stmt);
     return true;
 }
-vector<Attendancerecord> getAttendanceForEmployee(sqlite3* db, int employeeId);
+
+std::vector<AttendanceRecord>
+getAttendanceHistory(sqlite3* db, int employeeId) {
+    std::vector<AttendanceRecord> records;
+
+    const char* sql=
+        "SELECT type, timestamp "
+        "FROM attendance"
+        "WHERE employee_id = ?"
+        "ORDER BY timestamp;";
+
+    sqlite3_stmt* stmt = nullptr;
+
+    if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
+    std::cerr << "Chyba pri nacteni historie: " << sqlite3_errmsg(db) << std::endl;
+    return records;
+    }
+
+    sqlite3_bind_int(stmt, 1, employeeId);
+
+    while (sqlite3_step(stmt) == SQLITE_ROW) {
+        AttendanceRecord rec;
+        rec.type = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 0)
+        );
+        rec.timestamp = reinterpret_cast<const char*>(sqlite3_column_text(stmt, 1)
+        );
+        records.push_back(rec);
+    }
+
+    sqlite3_finalize(stmt);
+    return records;
+}
+long long calculateWorkedSeconds(
+const vector<AttendanceRecord>& records
+){
+long long totalseconds = 0;
+bool hasEntry = false;
+std::time_t entryTime = 0;
+
+for (const auto& rec: records) {
+    if(rec.type == "entry") {
+    entryTime = parseTimestamp(rec.timestamp);
+    hasEntry = true;
+    }else if (rec.type == "exit") {
+    time_t exitTime = parseTimestamp(rec.timestamp);
+    totalseconds += (exitTime - entryTime);
+    hasEntry = false;
+    }
+}
+return totalseconds;
+}
