@@ -11,9 +11,7 @@ add_executable(Projekt2025-Bui
         sqlite3.c
         DataFetch.cpp
         Attendance_log.cpp
-        Employee.h
         adminmenu.cpp
-        adminmenu.h
 )
 
 target_link_libraries(Projekt2025-Bui
