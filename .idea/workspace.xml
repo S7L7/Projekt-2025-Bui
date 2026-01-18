@@ -28,11 +28,9 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="LVL timer func">
-      <change beforePath="$PROJECT_DIR$/DataFetch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/DataFetch.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFetch.h" beforeDir="false" afterPath="$PROJECT_DIR$/DataFetch.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminmenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/adminmenu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/attendance.db" afterDir="false" />
+    <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="Time cal.">
+      <change beforePath="$PROJECT_DIR$/.idea/data_source_mapping.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,41 +103,41 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "C/C++ File.DataOutput.cpp.executor": "Run",
-    "C/C++ File.main.cpp.executor": "Run",
-    "CMake Application.Dochazkovy_system.executor": "Run",
-    "CMake Application.Projekt2025-Bui.executor": "Run",
-    "CMake Application.Projekt2025_Bui.executor": "Run",
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "Notification.DisplayName-DoNotAsk-vcs.commit.finished": "5 files committed",
-    "Notification.DoNotAsk-vcs.commit.finished": "true",
-    "RunOnceActivity.RadMigrateCodeStyle": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "RunOnceActivity.west.config.association.type.startup.service": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
-    "git-widget-placeholder": "main",
-    "ignore.virus.scanning.warn.message": "true",
-    "junie.onboarding.icon.badge.shown": "true",
-    "last_opened_file_path": "C:/Users/buijo/OneDrive/Plocha/Dochazkovy_system",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "configurable.group.appearance",
-    "to.speed.mode.migration.done": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;C/C++ File.DataOutput.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.Dochazkovy_system.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.Projekt2025-Bui.executor&quot;: &quot;Run&quot;,
+    &quot;CMake Application.Projekt2025_Bui.executor&quot;: &quot;Run&quot;,
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;Notification.DisplayName-DoNotAsk-vcs.commit.finished&quot;: &quot;5 files committed&quot;,
+    &quot;Notification.DoNotAsk-vcs.commit.finished&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/buijo/OneDrive/Plocha/Dochazkovy_system&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\buijo\OneDrive\Plocha\Projekt2025-Bui" />
@@ -205,7 +203,8 @@
       <workItem from="1768313831561" duration="3353000" />
       <workItem from="1768317846594" duration="59000" />
       <workItem from="1768328802109" duration="1280000" />
-      <workItem from="1768744207528" duration="5302000" />
+      <workItem from="1768744207528" duration="5552000" />
+      <workItem from="1768754926471" duration="531000" />
     </task>
     <task id="LOCAL-00001" summary="refactor projektu">
       <option name="closed" value="true" />
@@ -295,7 +294,23 @@
       <option name="project" value="LOCAL" />
       <updated>1767867043080</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="Time cal.">
+      <option name="closed" value="true" />
+      <created>1768752429888</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1768752429888</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Time cal.">
+      <option name="closed" value="true" />
+      <created>1768752448346</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1768752448346</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -325,7 +340,8 @@
     <MESSAGE value="Double insert" />
     <MESSAGE value="LVL timer func" />
     <MESSAGE value="Bug fix, admin preliminary" />
-    <option name="LAST_COMMIT_MESSAGE" value="Bug fix, admin preliminary" />
+    <MESSAGE value="Time cal." />
+    <option name="LAST_COMMIT_MESSAGE" value="Time cal." />
   </component>
   <component name="XDebuggerManager">
     <watches-manager>
