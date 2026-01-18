@@ -11,9 +11,10 @@ void runAdminMenu(sqlite3* db){
     while (true) {
         std::cout << "Vyberte možnosti 1-3 :" << std::endl
         << "1. přidat zaměstnance" << std::endl
-        << "2. pozastavit zaměstnance" << std::endl
-        << "3. vypsat hodiny zaměstnanců" << std:: endl
-        << "4. Zpět(vypne se administrátorský mod" << std::endl;
+        << "2. deaktivovat zaměstnance" << std::endl
+        << "3. aktivovat zaměstnance" << std:: endl
+        << "4. vypsat hodiny zaměstnanců" << std::endl
+        << "5. Zpět(vypne se administrátorský mod" << std::endl;
 
         std::cin >> vyber;
 
@@ -34,8 +35,7 @@ void runAdminMenu(sqlite3* db){
                     std::cout << "Zaměstnanec NEBYL přidán." << std::endl;
                 }break;
             }
-
-            case 2: {
+            case 2:{
                 int id;
                 std::cout << "Zadejte ID zaměstnance" << std::endl;
                 std::cin >> id;
@@ -45,9 +45,18 @@ void runAdminMenu(sqlite3* db){
                     std::cout << "Chyba při deaktivaci zaměstnance!" << std::endl;
                 }break;
             }
-            case 3:     // vypsat čas
-
-            case 4:     // zpet s vypnutim admin modu
+            case 3:{
+                int id;
+                std::cout << "Zadejte ID zaměstnance" << std::endl;
+                std::cin >> id;
+                if (activateEmployee(db,id)) {
+                    std::cout << "Zaměstnanec byl aktivován!" << std::endl;
+                }else {
+                    std::cout << "Chyba při aktivaci zaměstnance!" << std::endl;
+                }break;
+            }
+            case 4://čas
+            case 5:// zpet s vypnutim admin modu
                 return;
             default : std::cout << "neplatna volba" << std::endl;
         }

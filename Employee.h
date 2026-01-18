@@ -4,7 +4,6 @@
 
 #ifndef DOCHAZKOVY_SYSTEM_EMPLOYEE_H
 #define DOCHAZKOVY_SYSTEM_EMPLOYEE_H
-
 #include <string>
 
 struct Employee {
