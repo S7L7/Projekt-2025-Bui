@@ -5,17 +5,25 @@ project(Projekt2025-Bui)
 find_package(Threads REQUIRED)
 
 set(CMAKE_CXX_STANDARD 14)
-
-add_executable(Projekt2025-Bui
+#Píchačka exe
+add_executable(attendance
         main.cpp
-        sqlite3.c
-        DataFetch.cpp
-        Attendance_log.cpp
-        adminmenu.cpp
+        amalgamations/sqlite3.c
+        data/DataFetch.cpp
+        data/Attendance_log.cpp
+        data/adminmenu.cpp
         att_record.h
-)
 
-target_link_libraries(Projekt2025-Bui
+)
+target_link_libraries(attendance
         PRIVATE
         Threads::Threads
+)
+
+add_executable(attendance_server
+        server/server.cpp
+)
+
+target_link_libraries(attendance_server
+PRIVATE ws2_32 Threads::Threads
 )

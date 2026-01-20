@@ -15,7 +15,7 @@ using Clock = std::chrono::steady_clock;
 
 int main() {
     SetConsoleOutputCP(CP_UTF8);
-    SetConsoleCP(CP_UTF8); // chcp 65001
+    SetConsoleCP(CP_UTF8); // pro změnu na UTF-8 chcp 65001
 
     sqlite3* db = openDatabase("../attendance.db");
     if (!db) return 1;

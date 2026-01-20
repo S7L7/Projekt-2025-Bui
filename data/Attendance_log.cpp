@@ -1,7 +1,7 @@
 //
 // Created by buijo on 30.12.2025.
 //
-#include "Attendance_log.h"
+#include "../Attendance_log.h"
 #include <fstream>
 #include <iostream>
 #include <ctime>

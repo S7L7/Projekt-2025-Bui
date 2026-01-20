@@ -2,8 +2,8 @@
 // Created by buijo on 08.01.2026.
 //
 #include <iostream>
-#include "adminmenu.h"
-#include "DataFetch.h"
+#include "../adminmenu.h"
+#include "../DataFetch.h"
 
 void runAdminMenu(sqlite3* db){
     int vyber = 0;
@@ -71,7 +71,7 @@ void runAdminMenu(sqlite3* db){
                 long long hours = seconds / 3600;
                 long long minutes = (seconds % 3600) / 60;
 
-                std::cout << "odpracovaný čas: " << hours << ":" << minutes << std::endl;
+                std::cout << "odpracovaný čas: " << hours << " hod " << minutes << " min"<<std::endl;
                 break;
             }//čas
             case 5:// zpet s vypnutim admin modu

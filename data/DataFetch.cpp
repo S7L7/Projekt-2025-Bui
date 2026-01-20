@@ -1,9 +1,9 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
-#include "DataFetch.h"
-#include "Employee.h"
-#include "adminmenu.h"
+#include "../DataFetch.h"
+#include "../Employee.h"
+#include "../adminmenu.h"
 
 using namespace std;
 
@@ -198,14 +198,14 @@ getAttendanceHistory(sqlite3* db, int employeeId) {
 
     const char* sql=
         "SELECT type, timestamp "
-        "FROM attendance"
-        "WHERE employee_id = ?"
-        "ORDER BY timestamp;";
+        "FROM attendance "
+        "WHERE employee_id = ? "
+        "ORDER BY timestamp ASC;";
 
     sqlite3_stmt* stmt = nullptr;
 
     if (sqlite3_prepare_v2(db, sql, -1, &stmt, nullptr) != SQLITE_OK) {
-    std::cerr << "Chyba pri nacteni historie: " << sqlite3_errmsg(db) << std::endl;
+    std::cerr << "SQL: " << sql << std::endl;
     return records;
     }
 
@@ -231,7 +231,7 @@ bool hasEntry = false;
 std::time_t entryTime = 0;
 
 for (const auto& rec: records) {
-    if(rec.type == "entry") {
+    if(rec.type == "entry" && !hasEntry) {
     entryTime = parseTimestamp(rec.timestamp);
     hasEntry = true;
     }else if (rec.type == "exit") {
