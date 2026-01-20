@@ -8,7 +8,7 @@
 #include <string>
 #include <ctime>
 #include <vector>
-#include "amalgamations/sqlite3.h"
+#include "../amalgamations/sqlite3.h"
 #include "Employee.h"
 
 sqlite3* openDatabase(const std::string &filename);

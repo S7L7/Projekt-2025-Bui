@@ -2,8 +2,8 @@
 // Created by buijo on 08.01.2026.
 //
 #include <iostream>
-#include "../adminmenu.h"
-#include "../DataFetch.h"
+#include "../Client/adminmenu.h"
+#include "../Client/DataFetch.h"
 
 void runAdminMenu(sqlite3* db){
     int vyber = 0;

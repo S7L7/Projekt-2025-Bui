@@ -1,0 +1,4 @@
+cd Server
+cmake -B build
+cmake --build build
+build/attendance_server.exe

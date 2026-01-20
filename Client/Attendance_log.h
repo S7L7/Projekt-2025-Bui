@@ -6,6 +6,7 @@
 #define DOCHAZKOVY_SYSTEM_ATTENDANCE_LOG_H
 #include <string>
 
+
 void writeAttendanceToFile(
 const std::string &employeename,
 const std::string &type

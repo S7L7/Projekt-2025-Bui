@@ -1,9 +1,9 @@
 #include <iostream>
 #include <sstream>
 #include <iomanip>
-#include "../DataFetch.h"
-#include "../Employee.h"
-#include "../adminmenu.h"
+#include "../Client/DataFetch.h"
+#include "../Client/Employee.h"
+#include "../Client/adminmenu.h"
 
 using namespace std;
 

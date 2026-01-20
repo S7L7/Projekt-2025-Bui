@@ -8,22 +8,17 @@ set(CMAKE_CXX_STANDARD 14)
 #Píchačka exe
 add_executable(attendance
         main.cpp
-        amalgamations/sqlite3.c
-        data/DataFetch.cpp
-        data/Attendance_log.cpp
-        data/adminmenu.cpp
+        ../amalgamations/sqlite3.c
+        ../data/DataFetch.cpp
+        ../data/Attendance_log.cpp
+        ../data/adminmenu.cpp
         att_record.h
+        ../data/ServerClient.cpp
+        ServerClient.h
 
 )
 target_link_libraries(attendance
         PRIVATE
+        ws2_32
         Threads::Threads
-)
-
-add_executable(attendance_server
-        server/server.cpp
-)
-
-target_link_libraries(attendance_server
-PRIVATE ws2_32 Threads::Threads
 )

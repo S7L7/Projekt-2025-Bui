@@ -10,9 +10,12 @@
 int main() {
     httplib::Server server;
 
-    server.Get("/", [](const httplib::Request&, httplib::Response& res) {
-        std::cout << std::endl << "user has joined!" << std::endl;
-        res.set_content("Server is online!", "text/plain");
+    server.Post("/punch", [](const httplib::Request& req, httplib::Response& res) {
+        std::cout << std::endl << "==== PRISLA DATA HALLELUJA ====" << std::endl;
+        std::cout << req.body << std::endl;
+        std::cout << ("===============================", "text/plain");
+
+        res.set_content("OK", "text/plain");
     });
     std::cout << "Port 8080";
     server.listen("0.0.0.0", 8080);
