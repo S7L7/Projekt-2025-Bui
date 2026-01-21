@@ -4,6 +4,7 @@
 
 #ifndef DOCHAZKOVY_SYSTEM_SERVERCLIENT_H
 #define DOCHAZKOVY_SYSTEM_SERVERCLIENT_H
+#pragma once
 #include <string>
 
 bool sendtoServer(const std::string& rfid, const std::string& type);

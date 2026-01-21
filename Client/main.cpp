@@ -70,10 +70,10 @@ int main() {
             cout << "Dochazka zapsana" << endl;
 
             writeAttendanceToFile(
-            to_string(emp.id)+ " | " + emp.name,
-            type
-            );
-
+    emp.name,
+    emp.rfid,
+    type
+);
             } else {
                 cout << "Error: Nezapsano" << endl;
             }

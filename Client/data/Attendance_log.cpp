@@ -1,8 +1,8 @@
 //
 // Created by buijo on 30.12.2025.
 //
-#include "../Client/Attendance_log.h"
-#include "../Client/ServerClient.h"
+#include "../Attendance_log.h"
+#include "../ServerClient.h"
 #include <fstream>
 #include <iostream>
 #include <ctime>

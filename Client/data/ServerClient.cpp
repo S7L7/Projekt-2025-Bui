@@ -7,8 +7,8 @@
 
 #include <iostream>
 #include <string>
-#include "../server/cpp-httplib/httplib.h"
-#include "../Client/ServerClient.h"
+#include "../cpp-httplib/httplib.h"
+#include "../ServerClient.h"
 
 bool sendtoServer(const std::string& rfid, const std::string& type) {
     httplib::Client client("localhost", 8080);

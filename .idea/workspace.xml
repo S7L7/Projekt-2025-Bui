@@ -20,7 +20,8 @@
   </component>
   <component name="CMakeRunConfigurationManager">
     <generated>
-      <config projectName="Projekt2025-Bui" targetName="attendance" />
+      <config projectName="attendance_client" targetName="attendance_client" />
+      <config projectName="attendance_client" targetName="attendance" />
     </generated>
   </component>
   <component name="CMakeSettings">
@@ -30,24 +31,158 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="refactor, server add">
-      <change afterPath="$PROJECT_DIR$/Client/ServerClient.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/data/ServerClient.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/.gitattributes" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/.github/workflows/abidiff.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/.github/workflows/cifuzz.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/.github/workflows/release-docker.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/.github/workflows/test.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/.github/workflows/test_proxy.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/LICENSE" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/README-sse.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/README-stream.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/benchmark/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/benchmark/cpp-httplib/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/benchmark/crow/crow_all.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/benchmark/crow/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/cmake/FindBrotli.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/cmake/httplibConfig.cmake.in" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/docker/html/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/docker/main.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/Dockerfile.hello" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/accept_header.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/benchmark.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/ca-bundle.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/client.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/client.vcxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/example.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/hello.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/one_time_request.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/redirect.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/server.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/server.vcxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/server_and_client.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/simplecli.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/simplesvr.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/ssecli-stream.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/ssecli.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/ssesvr.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/upload.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/example/uploader.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/httplib.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/meson.build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/meson_options.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/split.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/ca-bundle.crt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/1" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5042094968537088" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5372331946541056" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5386708825800704" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5667822731132928" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5886572146327552" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5942767436562432" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-6007379124158464" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-6508706672541696" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/corpus/issue1264" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/server_fuzzer.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/server_fuzzer.dict" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/fuzzing/standalone_fuzz_target_runner.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gen-certs.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest-assertion-result.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest-death-test.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest-matchers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest-message.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest-param-test.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest-printers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest-spi.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest-test-part.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest-typed-test.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest_pred_impl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/gtest_prod.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/custom/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/custom/gtest-port.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/custom/gtest-printers.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/custom/gtest.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/gtest-death-test-internal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/gtest-filepath.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/gtest-internal.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/gtest-param-util.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/gtest-port-arch.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/gtest-port.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/gtest-string.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/include/gtest/internal/gtest-type-util.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest-all.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest-assertion-result.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest-death-test.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest-filepath.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest-internal-inl.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest-matchers.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest-port.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest-printers.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest-test-part.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest-typed-test.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/gtest/src/gtest_main.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/image.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/include_httplib.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/include_windows_h.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/make-shared-library.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/meson.build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/proxy/Dockerfile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/proxy/basic_passwd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/proxy/basic_squid.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/proxy/digest_passwd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/proxy/digest_squid.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/proxy/docker-compose.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/test.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/test.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/test.rootCA.conf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/test.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/test.vcxproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/test_proxy.cc" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www/dir/1MB.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www/dir/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www/dir/meson.build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www/dir/test.abcde" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www/dir/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www/empty_file" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www/file" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www/meson.build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www/日本語Dir/meson.build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www/日本語Dir/日本語File.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www2/dir/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www2/dir/meson.build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www2/dir/test.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www3/dir/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www3/dir/meson.build" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Client/cpp-httplib/test/www3/dir/test.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Attendance_log.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Attendance_log.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/DataFetch.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client/DataFetch.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Employee.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Employee.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Client/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/adminmenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client/adminmenu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/att_record.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client/att_record.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/Client/attendance.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/Attendance_log.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/data/Attendance_log.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/DataFetch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/data/DataFetch.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/adminmenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/data/adminmenu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/employees.db" beforeDir="false" afterPath="$PROJECT_DIR$/Client/employees.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Client/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/Attendance_log.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client/Attendance_log.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Client/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/DataFetch.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client/DataFetch.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/ServerClient.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client/ServerClient.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/adminmenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client/adminmenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/Client/attendance.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Client/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amalgamations/sqlite3.c" beforeDir="false" afterPath="$PROJECT_DIR$/Client/amalgamations/sqlite3.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/amalgamations/sqlite3.h" beforeDir="false" afterPath="$PROJECT_DIR$/Client/amalgamations/sqlite3.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Attendance_log.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Client/data/Attendance_log.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/DataFetch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Client/data/DataFetch.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/ServerClient.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Client/data/ServerClient.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/adminmenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Client/data/adminmenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/attendance.sql" beforeDir="false" afterPath="$PROJECT_DIR$/Client/data/attendance.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/server/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/server/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/server/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -84,33 +219,10 @@
   }
 }</component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///dummy.cpp" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/sqlite3.c" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Client/data/Attendance_log.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Client/data/DataFetch.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Client/data/ServerClient.cpp" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Client/data/adminmenu.cpp" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
@@ -129,44 +241,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;C/C++ File.DataOutput.cpp.executor&quot;: &quot;Run&quot;,
-    &quot;C/C++ File.main.cpp.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.Dochazkovy_system.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.Projekt2025-Bui.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.Projekt2025_Bui.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.attendance.executor&quot;: &quot;Run&quot;,
-    &quot;CMake Application.attendance_server.executor&quot;: &quot;Run&quot;,
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-vcs.commit.finished&quot;: &quot;5 files committed&quot;,
-    &quot;Notification.DoNotAsk-vcs.commit.finished&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.RadMigrateCodeStyle&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.west.config.association.type.startup.service&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
-    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
-    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/buijo/OneDrive/Plocha/Dochazkovy_system&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.appearance&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "C/C++ File.DataOutput.cpp.executor": "Run",
+    "C/C++ File.main.cpp.executor": "Run",
+    "CMake Application.Dochazkovy_system.executor": "Run",
+    "CMake Application.Projekt2025-Bui.executor": "Run",
+    "CMake Application.Projekt2025_Bui.executor": "Run",
+    "CMake Application.attendance.executor": "Run",
+    "CMake Application.attendance_client.executor": "Run",
+    "CMake Application.attendance_server.executor": "Run",
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-vcs.commit.finished": "5 files committed",
+    "Notification.DoNotAsk-vcs.commit.finished": "true",
+    "RunOnceActivity.RadMigrateCodeStyle": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "RunOnceActivity.west.config.association.type.startup.service": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "C:/Users/Beast/Desktop/Projekt-2025-Bui/Client",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.appearance",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Beast\Desktop\Projekt-2025-Bui\Client" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Beast\Desktop\Projekt-2025-Bui\Client" />
       <recent name="C:\Users\Beast\Desktop\Projekt-2025-Bui\data" />
@@ -175,13 +291,13 @@
       <recent name="C:\Users\buijo\OneDrive\Plocha\Projekt2025-Bui" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.attendance">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+  <component name="RunManager" selected="CMake Application.attendance_client">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
-    <configuration name="attendance" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="Projekt2025-Bui" TARGET_NAME="attendance" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="Projekt2025-Bui" RUN_TARGET_NAME="attendance">
+    <configuration name="attendance_client" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true" PROJECT_NAME="attendance_client" TARGET_NAME="attendance_client" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="attendance_client" RUN_TARGET_NAME="attendance_client">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -194,7 +310,7 @@
     </configuration>
     <list>
       <item itemvalue="C/C++ File.main.cpp" />
-      <item itemvalue="CMake Application.attendance" />
+      <item itemvalue="CMake Application.attendance_client" />
     </list>
     <recent_temporary>
       <list>
@@ -236,6 +352,8 @@
       <workItem from="1768842035678" duration="1845000" />
       <workItem from="1768907913055" duration="10521000" />
       <workItem from="1768942790030" duration="4570000" />
+      <workItem from="1768990496344" duration="7528000" />
+      <workItem from="1769033122087" duration="1437000" />
     </task>
     <task id="LOCAL-00001" summary="refactor projektu">
       <option name="closed" value="true" />

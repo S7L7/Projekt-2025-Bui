@@ -1,24 +1,27 @@
 cmake_minimum_required(VERSION 3.16)
-set(CMAKE_CXX_STANDARD 14)
-project(Projekt2025-Bui)
+project(attendance_client)
 
-find_package(Threads REQUIRED)
+set(CMAKE_CXX_STANDARD 17)
 
-set(CMAKE_CXX_STANDARD 14)
-#Píchačka exe
-add_executable(attendance
+add_executable(attendance_client
         main.cpp
-        ../amalgamations/sqlite3.c
-        ../data/DataFetch.cpp
-        ../data/Attendance_log.cpp
-        ../data/adminmenu.cpp
-        att_record.h
-        ../data/ServerClient.cpp
-        ServerClient.h
 
+        data/DataFetch.cpp
+        data/Attendance_log.cpp
+        data/ServerClient.cpp
+        data/adminmenu.cpp
+
+
+        amalgamations/sqlite3.c
 )
-target_link_libraries(attendance
+
+target_include_directories(attendance_client
         PRIVATE
+        ${CMAKE_CURRENT_SOURCE_DIR}
+        ${CMAKE_CURRENT_SOURCE_DIR}/data
+        ${CMAKE_CURRENT_SOURCE_DIR}/cpp-httplib
+)
+
+target_link_libraries(attendance_client
         ws2_32
-        Threads::Threads
 )

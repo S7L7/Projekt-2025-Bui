@@ -9,6 +9,7 @@
 
 void writeAttendanceToFile(
 const std::string &employeename,
-const std::string &type
+const std::string &type,
+const std::string& rfid
 );
 #endif //DOCHAZKOVY_SYSTEM_ATTENDANCE_LOG_H
