@@ -17,7 +17,7 @@ static string getCurrentTimeStamp() {
     strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M", ltm);
     return string(buffer);
 }
-void writeAttendanceToFile(const string& employeeName, const string& type, const string& rfid) {
+void writeAttendanceToFile(const string& employeeName, const string&  rfid, const string& type) {
     ofstream file("attendance_log.txt", ios::app);
 
     if (!file.is_open()) {
@@ -31,6 +31,7 @@ void writeAttendanceToFile(const string& employeeName, const string& type, const
          << " | "
          << type
          << endl;
+
     if (!sendtoServer(rfid,type)) {
         std::cerr << "Nepodarilo se odeslat data na server" << std::endl;
     }

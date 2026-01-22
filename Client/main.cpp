@@ -71,11 +71,9 @@ int main() {
 
             writeAttendanceToFile(
     emp.name,
-    emp.rfid,
-    type
-);
-            } else {
-                cout << "Error: Nezapsano" << endl;
+           emp.rfid,
+            type);}else {
+                        cout << "Error: Nezapsano" << endl;
             }
     }
     sqlite3_close(db);
