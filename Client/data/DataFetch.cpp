@@ -11,7 +11,7 @@ time_t parseTimestamp(const string& ts) {
 std::tm tm = {};
 std::istringstream ss(ts);
 
-ss >> std::get_time(&tm, "%Y-%m-%d %H:%M");
+ss>>std::get_time(&tm, "%Y-%m-%d %H:%M");
 tm.tm_sec = 0;
 
 return std::mktime(&tm);

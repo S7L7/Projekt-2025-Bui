@@ -17,17 +17,22 @@ void runAdminMenu(sqlite3* db){
         << "5. Zpět(vypne se administrátorský mod" << std::endl;
 
         std::cin >> vyber;
+        if (std::cin.fail()) {
+            std::cout << "Neplatný vstup!";
+            std::cin.clear();
+            std::cin.ignore();
+        }
 
         switch (vyber) {
             case 1:{
                 std::string name,rfid;
                 std::cout << "Zadejte jméno :" << std::endl;
                 std::cin >> name;
-                std::cout << "Zadejte RFID (max 8 znaků)" << std::endl;
+                std::cout << "Zadejte RFID (přiložením čipu)" << std::endl;
                 std::cin >> rfid;
                 std::getline(std::cin,rfid);
-                if (rfid.size() > 8) {
-                     std::cout << "RFID je příliš dlouhé!" << std ::endl;
+                if (rfid.size() != 10) {
+                     std::cout << "Neplatný čip!" << std ::endl;
                 }
                 if (addEmployee(db,name,rfid)) {
                     std::cout << "Zaměstnanec úspěšně přidán!" <<std::endl;
@@ -39,6 +44,11 @@ void runAdminMenu(sqlite3* db){
                 int id;
                 std::cout << "Zadejte ID zaměstnance" << std::endl;
                 std::cin >> id;
+                if (std::cin.fail()) {
+                    std::cout << "Neplatný vstup!";
+                    std::cin.clear();
+                    std::cin.ignore();
+                }
                 if (deactivateEmployee(db,id)) {
                     std::cout << "Zaměstnanec byl deaktivován!" << std::endl;
                 }else {
@@ -49,6 +59,11 @@ void runAdminMenu(sqlite3* db){
                 int id;
                 std::cout << "Zadejte ID zaměstnance" << std::endl;
                 std::cin >> id;
+                if (std::cin.fail()) {
+                    std::cout << "Neplatný vstup!";
+                    std::cin.clear();
+                    std::cin.ignore();
+                }
                 if (activateEmployee(db,id)) {
                     std::cout << "Zaměstnanec byl aktivován!" << std::endl;
                 }else {
@@ -59,6 +74,12 @@ void runAdminMenu(sqlite3* db){
                 int id;
                 std::cout << "Zadejte ID zaměstnance" << std::endl;
                 std::cin >> id;
+
+                if (std::cin.fail()) {
+                    std::cout << "Neplatný vstup!";
+                    std::cin.clear();
+                    std::cin.ignore();
+                }
 
                 auto history = getAttendanceHistory(db,id);
 

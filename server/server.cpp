@@ -9,12 +9,27 @@
 #include <../amalgamations/sqlite3.h>
 #include "cpp-httplib/httplib.h"
 #include <string>
+#include <windows.h>
+
+std::string getExePath() {
+    char buffer[MAX_PATH];
+    GetModuleFileNameA(nullptr, buffer, MAX_PATH);
+    return std::string(buffer);
+}
+std::string getExeDr() {
+    char buffer[MAX_PATH];
+    GetModuleFileNameA(nullptr, buffer, MAX_PATH);
+
+    std::string path(buffer);
+    size_t pos = path.find_last_of("\\/");
+    return path.substr(0, pos);
+}
 
 
 sqlite3* openDatabase() {
     sqlite3* db = nullptr;
 
-        if (sqlite3_open("C:/Users/Beast/Desktop/Projekt-2025-Bui/server/attendance_server.db",&db
+        if (sqlite3_open("attendance_server.db",&db
         )!= SQLITE_OK){
             std::cerr << "nelze otevrit server db" << std::endl;
             return nullptr;

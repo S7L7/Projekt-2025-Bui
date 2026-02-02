@@ -15,7 +15,7 @@ using Clock = std::chrono::steady_clock;
 
 int main() {
     SetConsoleOutputCP(CP_UTF8);
-    SetConsoleCP(CP_UTF8); // pro změnu na UTF-8 chcp 65001
+    SetConsoleCP(CP_UTF8); // pro změnu na UTF-8 chcp 65001 kvůli háčkům a čárkám
 
     sqlite3* db = openDatabase("../attendance.db");
     if (!db) return 1;
@@ -26,7 +26,7 @@ int main() {
         string rfid;
         cout << "Zadejte ID: ";
         cin >> rfid;
-        if (rfid == "ADMINMODE") {
+        if (rfid == "0004678247") {
             runAdminMenu(db);
             continue;
         }
