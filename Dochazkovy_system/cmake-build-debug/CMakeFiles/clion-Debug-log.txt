@@ -1,0 +1,1 @@
+CMakeLists.txt not found in C:\Users\buijo\CLionProjects\Projekt-2025-Bui\Dochazkovy_system Select CMakeLists.txt

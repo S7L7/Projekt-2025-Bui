@@ -7,14 +7,17 @@
 
 using namespace std;
 
-time_t parseTimestamp(const string& ts) {
-std::tm tm = {};
-std::istringstream ss(ts);
+time_t parseTimestamp(const std::string& ts) {
+    std::tm tm = {};
+    std::istringstream ss(ts);
+    ss >> std::get_time(&tm, "%Y-%m-%d %H:%M:%S");
 
-ss>>std::get_time(&tm, "%Y-%m-%d %H:%M");
-tm.tm_sec = 0;
+    if (ss.fail()) {
+        std::cerr << "Parse fail for: " << ts << std::endl;
+        return 0;
+    }
 
-return std::mktime(&tm);
+    return std::mktime(&tm);
 }
 
 sqlite3* openDatabase(const string &filename) {
@@ -87,7 +90,7 @@ string getEmployeeName(sqlite3* db, int employeeId) {
 }
 //získání daného zaměstnance podle jejich RFID  (vložení RFID,vrátí se jméno stav atd.)
 Employee getEmployeeByRfid(sqlite3* db, const std::string& rfid) {
-    const char* sql = "SELECT id, name, rfid_uid, status FROM employees WHERE rfid_uid = ? LIMIT 1;";
+    const char* sql = "SELECT id, name, rfid_uid, status, active FROM employees WHERE rfid_uid = ? LIMIT 1;";
     sqlite3_stmt* stmt = nullptr;
 
     Employee emp;
@@ -103,7 +106,15 @@ Employee getEmployeeByRfid(sqlite3* db, const std::string& rfid) {
         emp.name = reinterpret_cast<const char*>(sqlite3_column_text(stmt,1));
         emp.rfid = reinterpret_cast<const char*>(sqlite3_column_text(stmt,2));
         emp.status = sqlite3_column_int(stmt,3);
+
+        int active = sqlite3_column_int(stmt,4);
+
+        if (active == 0) {
+            std:: cout <<"Zamestnanec je deaktivovan" << std::endl;
+            emp.id = -1;
+        }
     }
+
     sqlite3_finalize(stmt);
     return emp;
 }
@@ -141,7 +152,7 @@ bool addEmployee(sqlite3 *db, const std::string& name, const std::string &rfid) 
     int rc=sqlite3_step(stmt);
 
     if (rc != SQLITE_DONE) {
-        cerr << "Chyba pri vlozeni dat" <<  sqlite3_errmsg(db) << endl;
+        cerr << "Chyba pri vlozeni dat: " <<  sqlite3_errmsg(db) << endl;
         sqlite3_finalize(stmt);
         return false;
     }
@@ -160,7 +171,7 @@ bool deactivateEmployee(sqlite3* db, int employeeId) {
     int rc=sqlite3_step(stmt);
 
     if (rc != SQLITE_DONE) {
-        cerr << "Chyba pri deaktivaci" <<  sqlite3_errmsg(db) << endl;
+        cerr << "Chyba pri deaktivaci: " <<  sqlite3_errmsg(db) << endl;
         sqlite3_finalize(stmt);
         return false;
     }

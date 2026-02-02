@@ -31,149 +31,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="00aabb38-fdb0-4210-9634-5e482b3e6494" name="Changes" comment="code finish - no hardware">
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/.github/workflows/abidiff.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/.github/workflows/cifuzz.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/.github/workflows/release-docker.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/.github/workflows/test.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/.github/workflows/test_proxy.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/README-sse.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/README-stream.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/benchmark/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/benchmark/cpp-httplib/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/benchmark/crow/crow_all.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/benchmark/crow/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/cmake/FindBrotli.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/cmake/httplibConfig.cmake.in" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/docker/html/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/docker/main.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/Dockerfile.hello" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/accept_header.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/benchmark.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/ca-bundle.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/client.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/client.vcxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/example.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/hello.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/one_time_request.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/redirect.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/server.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/server.vcxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/server_and_client.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/simplecli.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/simplesvr.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/ssecli-stream.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/ssecli.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/ssesvr.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/upload.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/example/uploader.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/httplib.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/meson.build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/meson_options.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/split.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/ca-bundle.crt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/1" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5042094968537088" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5372331946541056" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5386708825800704" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5667822731132928" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5886572146327552" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-5942767436562432" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-6007379124158464" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/clusterfuzz-testcase-minimized-server_fuzzer-6508706672541696" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/corpus/issue1264" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/server_fuzzer.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/server_fuzzer.dict" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/fuzzing/standalone_fuzz_target_runner.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gen-certs.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest-assertion-result.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest-death-test.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest-matchers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest-message.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest-param-test.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest-printers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest-spi.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest-test-part.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest-typed-test.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest_pred_impl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/gtest_prod.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/custom/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/custom/gtest-port.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/custom/gtest-printers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/custom/gtest.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/gtest-death-test-internal.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/gtest-filepath.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/gtest-internal.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/gtest-param-util.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/gtest-port-arch.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/gtest-port.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/gtest-string.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/include/gtest/internal/gtest-type-util.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest-all.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest-assertion-result.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest-death-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest-filepath.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest-internal-inl.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest-matchers.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest-port.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest-printers.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest-test-part.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest-typed-test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/gtest/src/gtest_main.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/image.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/include_httplib.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/include_windows_h.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/make-shared-library.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/meson.build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/proxy/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/proxy/basic_passwd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/proxy/basic_squid.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/proxy/digest_passwd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/proxy/digest_squid.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/proxy/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/test.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/test.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/test.rootCA.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/test.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/test.vcxproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/test_proxy.cc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www/dir/1MB.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www/dir/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www/dir/meson.build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www/dir/test.abcde" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www/dir/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www/empty_file" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www/file" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www/meson.build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www/日本語Dir/meson.build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www/日本語Dir/日本語File.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www2/dir/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www2/dir/meson.build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www2/dir/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www3/dir/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www3/dir/meson.build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/server/cpp-httplib/test/www3/dir/test.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/Client/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/attendance.db" beforeDir="false" afterPath="$PROJECT_DIR$/Client/attendance.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/data/DataFetch.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Client/data/DataFetch.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Client/data/adminmenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Client/data/adminmenu.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/server/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/attendance_server.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/server/server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/server/server.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Client/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Client/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -349,7 +212,8 @@
       <workItem from="1770019443856" duration="9000" />
       <workItem from="1770020062858" duration="623000" />
       <workItem from="1770022686805" duration="3168000" />
-      <workItem from="1770026035347" duration="636000" />
+      <workItem from="1770026035347" duration="2762000" />
+      <workItem from="1770029060737" duration="3375000" />
     </task>
     <task id="LOCAL-00001" summary="refactor projektu">
       <option name="closed" value="true" />

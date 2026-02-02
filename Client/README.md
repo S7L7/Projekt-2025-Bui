@@ -13,8 +13,6 @@ administraci zaměstnanců
 
 ochranu proti neplatným vstupům
 
-zabezpečení serveru pomocí API klíče
-
 RFID čtečka se chová jako USB klávesnice (HID device) a posílá UID čipu jako hexadecimální řetězec.
 
 🧱 Architektura systému

@@ -67,13 +67,13 @@ int main() {
                 lastValidAction[emp.id] = now;
             }
 
-            cout << "Dochazka zapsana" << endl;
+            cout << "Dochazka zapsána" << endl;
 
             writeAttendanceToFile(
     emp.name,
            emp.rfid,
             type);}else {
-                        cout << "Error: Nezapsano" << endl;
+                        cout << "Error: Nezapsáno" << endl;
             }
     }
     sqlite3_close(db);

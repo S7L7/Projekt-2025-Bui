@@ -32,9 +32,6 @@ void runAdminMenu(sqlite3* db){
                 std::cout << "Zadejte RFID (přiložením čipu)" << std::endl;
                 std::cin >> rfid;
                 std::getline(std::cin,rfid);
-                if (rfid.size() != 10) {
-                     std::cout << "Neplatný čip!" << std ::endl;
-                }
                 if (addEmployee(db,name,rfid)) {
                     std::cout << "Zaměstnanec úspěšně přidán!" <<std::endl;
                 }else {
