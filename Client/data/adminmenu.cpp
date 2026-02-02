@@ -7,6 +7,7 @@
 
 void runAdminMenu(sqlite3* db){
     int vyber = 0;
+//0004663597
 
     while (true) {
         std::cout << "Vyberte možnosti 1-3 :" << std::endl

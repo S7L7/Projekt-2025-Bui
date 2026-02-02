@@ -29,13 +29,17 @@ std::string getExeDr() {
 sqlite3* openDatabase() {
     sqlite3* db = nullptr;
 
-        if (sqlite3_open("attendance_server.db",&db
-        )!= SQLITE_OK){
-            std::cerr << "nelze otevrit server db" << std::endl;
-            return nullptr;
-        }
-    return db;
+    std::string path = getExeDr() + "\\attendance_server.db";
+
+    if (sqlite3_open(path.c_str(), &db) != SQLITE_OK){
+        std::cerr << "nelze otevrit server db" << std::endl;
+        return nullptr;
     }
+    return db;
+}
+
+
+
 bool insertAttendance(sqlite3* db, const std::string& rfid,const std::string& type) {
     const char* sql = "INSERT into attendance (rfid, type, timestamp) VALUES (?,?,?);";
     sqlite3_stmt* stmt = nullptr;
@@ -62,9 +66,37 @@ bool insertAttendance(sqlite3* db, const std::string& rfid,const std::string& ty
         sqlite3_finalize(stmt);
         return ok;
 }
+
+void ensureTablesExist(sqlite3* db) {
+    const char* employees_sql =
+        "CREATE TABLE IF NOT EXISTS employees ("
+        "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+        "name TEXT NOT NULL,"
+        "rfid_uid"
+        "TEXT UNIQUE NOT NULL,"
+        "status INTEGER NOT NULL DEFAULT 0,"
+        "active INTEGER NOT NULL DEFAULT 1,"
+        "is_admin INTEGER NOT NULL DEFAULT 0"
+        ");";
+
+    const char* attendance_sql =
+        "CREATE TABLE IF NOT EXISTS attendance ("
+        "id INTEGER PRIMARY KEY AUTOINCREMENT,"
+        "employee_id INTEGER,"
+        "type TEXT,"
+        "timestamp TEXT DEFAULT CURRENT_TIMESTAMP"
+        ");";
+
+    char* err = nullptr;
+
+    sqlite3_exec(db, employees_sql, nullptr, nullptr, &err);
+    sqlite3_exec(db, attendance_sql, nullptr, nullptr, &err);
+}
+
 int main() {
     httplib::Server server;
     sqlite3* db = openDatabase();
+    ensureTablesExist(db);
     if (!db) {
         std::cerr << "DB init failed, server konci" << std::endl;
         return 1;
@@ -82,7 +114,6 @@ int main() {
         }
         std::string rfid = req.body.substr(rfidPos + 8, req.body.find("\"", rfidPos + 8) - (rfidPos + 8));
         std::string type = req.body.substr(typePos + 8, req.body.find("\"", typePos + 8) - (typePos + 8));
-
 
         if (insertAttendance(db,rfid,type)) {
             res.set_content("OK", "text/plain");
